@@ -1,0 +1,116 @@
+WordPress
+
+Unable to write to wp-config.php file.
+
+You can create the wp-config.php file manually and paste the following text into it.
+
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wp_database' );
+
+/** MySQL database username */
+define( 'DB_USER', 'wpuser' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'Lipton123!' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database Charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The Database Collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+
+
+// Enable WP_DEBUG mode
+ define( 'WP_DEBUG', true );
+
+// // Enable Debug logging to the /wp-content/debug.log file
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_LOG', '/tmp/wp-errors.log' );
+// // Disable display of errors and warnings
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
+
+// // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+define( 'SCRIPT_DEBUG', true );
+
+
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         '~cs.<U/&TY.4.gyl[yK,B7w)MrjWY1!!Ypw#Ai->pN0B+<DcT%pY0/NrvpXBh0de' );
+define( 'SECURE_AUTH_KEY',  '%]],N9Dx?Vh!/uj?O>$TBA[y/ATld#o64?8J9pGtv|y:u|bHp_PiJxt{O!Ow[G=*' );
+define( 'LOGGED_IN_KEY',    ',C5eN[JLN&0kgA`<f~TIDy U#o}HO>F;/V/B{.Oqxg7+)k#KPv_6+R1C*-4AdO!)' );
+define( 'NONCE_KEY',        'wFMQJC(rtZ[mX`ZWt1BT{jx5xm&A)#|x.gy9<pGC|]E@GmJ3TC+6SyC}ZIE$;DpE' );
+define( 'AUTH_SALT',        '5$RyuWd}aPGg<t)!N%U#}qxZyo)e>ltop9ehe[u>;l|Ob~Qw(f[ X]J7U_ML]_4J' );
+define( 'SECURE_AUTH_SALT', '#}>RpbePe]E`HZte.|e/f?o>=z?^($o{&K lMy5l<9pt&sp!:4-A&EW|dapxPm[u' );
+define( 'LOGGED_IN_SALT',   '5IAYUO,`^xOq8kh(uNuAUGEoi8oJW|O[[LL1|an$9H=8Ej$zO61C7|2neY1~cFM*' );
+define( 'NONCE_SALT',       'dr#g6D0#MwV?9;bc&BD63k=qT%R|w2SZqkwfwn/}f4]YqR?O!imSfx2`G.*I)?=<' );
+
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
+
+After you’ve done that, click “Run the installation”.
+
+Run the installation
