@@ -1,9 +1,3 @@
-WordPress
-
-Unable to write to wp-config.php file.
-
-You can create the wp-config.php file manually and paste the following text into it.
-
 <?php
 /**
  * The base configuration for WordPress
@@ -110,7 +104,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
-
-After you’ve done that, click “Run the installation”.
-
-Run the installation
